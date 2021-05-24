@@ -19,4 +19,20 @@ public class JCard {
         return suit;
     }
 
+    public String getSuitName() {
+        switch (suit) {
+            case 1:
+                return "Spades";
+            case 2:
+                return "Spades";
+            case 3:
+                return "Spades";
+            case 4:
+                return "Diamonds";
+            default:
+                throw new IllegalStateException("Bad suit: " + suit);
+        }
+
+
+    }
 }

@@ -23,6 +23,7 @@ class CardTest {
 
     @Test
     fun testSuitName() {
+
         val c1 = Card(value = 1, suit = 1)
         val c2 = Card(value = 1, suit = 2)
         val c3 = Card(value = 1, suit = 3)
@@ -30,15 +31,15 @@ class CardTest {
 
         val c5 = Card(value = 1, suit = 5)
 
-        assertEquals("Spades", c1.computeSuitName())
-        assertEquals("Hearts", c2.computeSuitName())
-        assertEquals("Clubs", c3.computeSuitName())
-        assertEquals("Diamonds", c4.computeSuitName())
+        assertEquals("Spades", c1.computeSuitNameIfExpression())
+        assertEquals("Hearts", c2.computeSuitNameIfExpression())
+        assertEquals("Clubs", c3.computeSuitNameIfExpression())
+        assertEquals("Diamonds", c4.computeSuitNameIfExpression())
 
 
 
         try {
-            assertEquals("ff", c5.computeSuitName())
+            assertEquals("ff", c5.computeSuitNameIfExpression())
             fail("We should never get here")
             //should never get hear
         } catch (e: IllegalStateException) {
@@ -46,9 +47,9 @@ class CardTest {
             //success
         }
 
-//        assertEquals("Spades",c1.suitName)
-//        assertEquals("Hearts",c2.suitName)
-//        assertEquals("Clubs",c3.suitName)
-//        assertEquals("Diamonds",c4.suitName)
+        assertEquals("Spades", c1.computeSuitNameWhenExpression())
+        assertEquals("Hearts", c2.computeSuitNameWhenExpression())
+        assertEquals("Clubs", c3.computeSuitNameWhenExpression())
+        assertEquals("Diamonds", c4.computeSuitNameWhenExpression())
     }
 }

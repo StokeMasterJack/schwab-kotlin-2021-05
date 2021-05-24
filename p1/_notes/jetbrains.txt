@@ -1,0 +1,5 @@
+
+
+# To get the type of an expression:
+1. Highlight expr
+2. From Menus: View -> Type Info (or Ctr - Shift P)
