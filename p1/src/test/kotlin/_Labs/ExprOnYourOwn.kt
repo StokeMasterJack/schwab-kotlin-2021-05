@@ -1,7 +1,6 @@
 package _Labs
 
 import org.junit.Test
-import kotlin.test.assertEquals
 
 class ExprOnYourOwn {
 
@@ -10,8 +9,15 @@ class ExprOnYourOwn {
     fun test() {
         var suit: Int = 1   //try with 1, 2,3 and 4
 
+        //replace "Spades" String literal with a when expr that returns a string
+        val suitName: String = when (suit) {
+            1 -> "Spades"
+            2 -> "Hearts"
+            3 -> "Clubs"
+            4 -> "Diamonds"
+            else -> throw IllegalStateException("Bad suit: $suit")
+        }
 
-        val suitName: String = "Spades"  //replace "Spades" String literal with a when expr that returns a string
 
         println("suit: $suit   suitName: $suitName")
 
