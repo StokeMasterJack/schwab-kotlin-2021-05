@@ -3,6 +3,10 @@ package _Labs
 import org.junit.Test
 import kotlin.test.assertEquals
 
+/*
+Replace the insides of the computeSuitName function, so that it
+uses a when expr to compute the correct suitName 9 (a String) for the suit (an Int)
+ */
 class FunctionOnYourOwn {
 
     @Test
