@@ -19,11 +19,31 @@ data class Card(val value: Int, val suit: Int) {
         else throw IllegalStateException("Bad suit: $suit")
     }
 
-    fun computeSuitNameWhenExpression(): String {
-        return "Spades"
+    fun computeSuitNameWhenExpression(suit: Int) = when (suit) {
+        1 -> "Spades"
+        2 -> "Hearts"
+        3 -> "Clubs"
+        4 -> "Diamonds"
+        else -> throw IllegalStateException("Bad suit: $suit")
     }
-
 
 }
 
+fun computeSuitName1(suit: Int): String {
+    return when (suit) {
+        1 -> "Spades"
+        2 -> "Hearts"
+        3 -> "Clubs"
+        4 -> "Diamonds"
+        else -> throw IllegalStateException("Bad suit: $suit")
+    }
+}
+
+fun computeSuitName2(suit: Int) = when (suit) {
+    1 -> "Spades"
+    2 -> "Hearts"
+    3 -> "Clubs"
+    4 -> "Diamonds"
+    else -> throw IllegalStateException("Bad suit: $suit")
+}
 
