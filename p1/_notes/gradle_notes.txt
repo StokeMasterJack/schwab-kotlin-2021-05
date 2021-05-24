@@ -1,0 +1,15 @@
+settings.gradle.kts:
+    list all of your sub-projects (or sub-modules)
+    1 of these
+
+
+
+
+build.gradle.kts
+    1 per project (or sub-project)
+
+
+gradle.properties
+
+
+kts: Kotlin Script

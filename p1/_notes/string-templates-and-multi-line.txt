@@ -1,0 +1,13 @@
+String s = "Bad Suit: " + suit
+
+
+val s = "Bad Suit: ${suit + 43}"
+val s = "Bad Suit: ${suit}"
+
+
+val ln = "Ford"
+
+val rawString1 = """
+    SELECT * FROM USERS
+    WHERE lastName = $ln
+"""

@@ -1,0 +1,18 @@
+
+
+Game
+    ph:Hand
+    dh:Hand
+    status: String
+    isGameOver:Boolean
+
+Hand
+    name:String
+    cards: List<Card>
+    points: Int
+    status: String
+
+Card
+    value: Int  //1 to 13
+    suit: Int   //1 to 4
+

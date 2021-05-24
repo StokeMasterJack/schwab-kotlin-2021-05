@@ -1,0 +1,7 @@
+
+
+happy-path return: return
+
+not-so-happy-path return:  throw
+    throw IllegalArgumentException()
+    throw IllegalStateException()

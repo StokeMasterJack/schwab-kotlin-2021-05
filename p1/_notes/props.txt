@@ -1,0 +1,35 @@
+Kotlin Properties
+
+In Java:
+    value is an instance variable
+    getValue/setValue: creates a read/write property
+
+In Kotlin:
+    var x: Int: creates a read/write property
+    val x: Int: creates a read property
+
+
+
+
+data class Card(val value: Int, val suit: Int)
+
+public class JCard {
+
+    private int value;
+    private int suit;
+
+    JCard(int value, int suit) {
+        this.value = value;
+        this.suit = suit;
+    }
+
+
+    public int getValue() {
+        return value;
+    }
+
+    public int getSuit() {
+        return suit;
+    }
+
+}

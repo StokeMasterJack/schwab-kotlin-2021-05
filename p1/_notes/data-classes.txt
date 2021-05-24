@@ -1,0 +1,12 @@
+
+
+data classes
+
+
+
+add:
+    toString()
+    equals:   (c1 == c2)
+    hashCode: set.add(c1)
+    copy():   // val c2:Card = c1.copy(x = 10)
+    destructuring
