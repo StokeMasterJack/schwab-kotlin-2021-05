@@ -3,6 +3,11 @@ val
 var
 const
 
+if
+when
+fun
+class
+
 
 
 

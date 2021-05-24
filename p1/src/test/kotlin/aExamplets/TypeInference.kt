@@ -1,4 +1,4 @@
-package misc
+package aExamplets
 
 val x: Int = 33
 val y = 33

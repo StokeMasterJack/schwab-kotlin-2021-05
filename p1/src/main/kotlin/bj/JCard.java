@@ -1,4 +1,4 @@
-package bjj;
+package bj;
 
 public class JCard {
 
