@@ -11,10 +11,15 @@ Statement vs expression
 
     Expressions compute a value but do not change anything (no side-effects)
 
-## In Kotlin if is an expression
-      int drinkingAge1 = if(state == "WS")  14 else 21
+## In Kotlin, "if" is an "expression"
 
-        int drinkingAge2 = if(state == "WS"){
+1. If expressions compute a value
+
+
+
+
+
+        val drinkingAge2 = if(state == "WS"){
             print(1)
             print(1)
             print(1)

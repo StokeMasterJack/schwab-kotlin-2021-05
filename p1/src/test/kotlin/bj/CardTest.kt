@@ -6,7 +6,6 @@ import kotlin.test.fail
 
 class CardTest {
 
-
     @Test
     fun test1() {
         val c1 = Card(value = 1, suit = 1)  //ace of spades
@@ -36,8 +35,6 @@ class CardTest {
         assertEquals("Clubs", c3.computeSuitNameIfExpression())
         assertEquals("Diamonds", c4.computeSuitNameIfExpression())
 
-
-
         try {
             assertEquals("ff", c5.computeSuitNameIfExpression())
             fail("We should never get here")
@@ -51,5 +48,6 @@ class CardTest {
         assertEquals("Hearts", c2.computeSuitNameWhenExpression())
         assertEquals("Clubs", c3.computeSuitNameWhenExpression())
         assertEquals("Diamonds", c4.computeSuitNameWhenExpression())
+
     }
 }
