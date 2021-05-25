@@ -25,4 +25,5 @@ class StringBuildingLab {
         assertEquals("Ace of Spades",cardName11)
         assertEquals("4 of Hearts",cardName44)
     }
+
 }
