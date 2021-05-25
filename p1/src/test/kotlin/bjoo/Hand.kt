@@ -1,0 +1,4 @@
+package bjoo
+
+class Hand {
+}

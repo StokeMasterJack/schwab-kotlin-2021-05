@@ -4,7 +4,7 @@ package bjoo
  * @param value 1 to 13 (1 = Ace and 13 = King)
  * @param suit 1 to 4 (1 = Spades and 4 = Diamonds)
  */
-data class Card(val value: Int, var suit: Int) {
+data class Card(val value: Int, val suit: Int) {
 
     init {
         require(suit in 1..4) { "Bad suit[$suit]. suit must in 1..4" }
@@ -42,4 +42,5 @@ data class Card(val value: Int, var suit: Int) {
 
     val name: String get() = "$valueName of $suitName"
 
+    override fun toString() = name
 }

@@ -7,10 +7,13 @@ Game
     isGameOver:Boolean
 
 Hand
-    name:String   //Dealer or Player
+    name:String     //Dealer or Player
     cards: List<Card>
     points: Int         //sum of card points
     status: String      //12 Points
+    isBust: Boolean     //points > 21
+    isBlackjack: Boolean     //points = 21
+    isStay:Boolean           //player hit the stay button
 
 Card
     value: Int  //1..13
@@ -21,3 +24,8 @@ Card
     name:String
     points: Int
 
+
+
+fun stay()    //adds cards, 1 at a time, to dealer, until > 17
+fun hit()    //adds 1 card to player
+fun deal()   //clears both hands  , adds 2 cards to both (player and dealer)
