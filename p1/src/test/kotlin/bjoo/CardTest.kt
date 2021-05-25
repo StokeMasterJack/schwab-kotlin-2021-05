@@ -1,4 +1,4 @@
-package bj
+package bjoo
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -70,23 +70,42 @@ class CardTest {
 
     }
 
-//    @Test
-//    fun testPoints() {
-//
-//        val c1 = Card(value = 1, suit = 1)
-//        val c2 = Card(value = 2, suit = 2)
-//        val c10 = Card(value = 10, suit = 3)
-//        val c11 = Card(value = 11, suit = 4)
-//        val c13 = Card(value = 13, suit = 4)
-//
-//        assertEquals(1, c1.points)
-//        assertEquals(2, c2.points)
-//        assertEquals(10, c10.points)
-//        assertEquals(10, c11.points)
-//        assertEquals(10, c13.points)
-//
-//
-//    }
+    @Test
+    fun testPoints() {
+
+        val c1 = Card(value = 1, suit = 1)
+        val c2 = Card(value = 2, suit = 2)
+        val c10 = Card(value = 10, suit = 3)
+        val c11 = Card(value = 11, suit = 4)
+        val c13 = Card(value = 13, suit = 4)
+
+        assertEquals(1, c1.points)
+        assertEquals(2, c2.points)
+        assertEquals(10, c10.points)
+        assertEquals(10, c11.points)
+        assertEquals(10, c13.points)
+
+
+    }
+
+
+    //don't change the test
+    //Checkmark when you are done
+    @Test
+    fun testCardName() {
+
+        val c11 = Card(value = 1, suit = 1)
+        val c23 = Card(value = 2, suit = 3)
+        val c104 = Card(value = 10, suit = 4)
+        val c114 = Card(value = 11, suit = 4)
+        val c134 = Card(value = 13, suit = 4)
+
+        assertEquals("Ace of Spades", c11.name)
+        assertEquals("2 of Clubs",  c23.name)
+        assertEquals("10 of Diamonds",  c104.name)
+        assertEquals("Jack of Diamonds", c114.name)
+        assertEquals("King of Diamonds",  c134.name)
+    }
 
 
 }

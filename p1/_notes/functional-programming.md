@@ -23,4 +23,8 @@
 
 Expressions: just compute a value
 
+
+## Pure Function
+The Function's output (Function's return value)  is strictly based the  Function's inputs (Function's args) 
+
    

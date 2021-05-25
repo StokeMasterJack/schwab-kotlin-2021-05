@@ -1,4 +1,4 @@
-package bj
+package bjoo
 
 /**
  * @param value 1 to 13 (1 = Ace and 13 = King)
@@ -11,27 +11,6 @@ data class Card(val value: Int, var suit: Int) {
         require(value in 1..13) { "Bad value[$value]. value must in 1..13" }
     }
 
-    fun computeValueName(): String {
-        return when (value) {
-            1 -> "Ace"
-            in 2..10 -> value.toString()
-            11 -> "Jack"
-            12 -> "Queen"
-            13 -> "King"
-            else -> throw IllegalStateException("Bad value: $value")
-        }
-    }
-
-    val valueName2: String get() {
-        return when (value) {
-            1 -> "Ace"
-            in 2..10 -> value.toString()
-            11 -> "Jack"
-            12 -> "Queen"
-            13 -> "King"
-            else -> throw IllegalStateException("Bad value: $value")
-        }
-    }
 
     val suitName: String
         get() = when (suit) {
@@ -53,6 +32,13 @@ data class Card(val value: Int, var suit: Int) {
         }
 
 
+    val points: Int
+        get() = when (value) {
+            in 1..9 -> value
+            in 10..13 -> 10
+            else -> throw IllegalStateException("Bad value: $value")
+
+        }
 
 
 }
