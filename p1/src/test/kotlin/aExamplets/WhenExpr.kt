@@ -12,7 +12,6 @@ fun computeSuit(suit: Int) = when (suit) {
 }
 
 
-
 // When with IntRange
 fun computeValueName(value: Int): String = when (value) {
     1 -> "Ace"
@@ -23,6 +22,19 @@ fun computeValueName(value: Int): String = when (value) {
     else -> throw IllegalStateException("Bad value: $value")
 }
 
+fun computeValueName2(value: Int): String {
+    require(value in 1..13) { "Bad value[$value]. value must in 1..13" }
+    val p = when (value) {
+        1 -> "Ace"
+        in 2..10 -> value.toString()
+        11 -> "Jack"
+        12 -> "Queen"
+        13 -> "King"
+        else -> throw IllegalStateException("Bad value: $value")
+    }
+    return p
+
+}
 
 abstract class Shape
 class Rect(val width: Int, val length: Int) : Shape()
