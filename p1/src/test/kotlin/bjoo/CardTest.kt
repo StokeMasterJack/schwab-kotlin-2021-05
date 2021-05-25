@@ -65,9 +65,6 @@ class CardTest {
         assertEquals("King", c13.valueName)
 
 
-        assertEquals("King", c13.computeValueName())
-
-
     }
 
     @Test

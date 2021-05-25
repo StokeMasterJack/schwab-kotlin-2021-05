@@ -7,12 +7,17 @@ Game
     isGameOver:Boolean
 
 Hand
-    name:String
+    name:String   //Dealer or Player
     cards: List<Card>
-    points: Int
-    status: String
+    points: Int         //sum of card points
+    status: String      //12 Points
 
 Card
-    value: Int  //1 to 13
-    suit: Int   //1 to 4
+    value: Int  //1..13
+    suit: Int   //1..4
+
+    valueName:String
+    suitName:String
+    name:String
+    points: Int
 
