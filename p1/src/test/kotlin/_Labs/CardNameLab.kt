@@ -27,11 +27,10 @@ fun computeValueName1(value: Int): String {
     }
 }
 
+
 fun computeCardName(value: Int, suit: Int): String {
     require(value in 1..13) { "Bad value[$value]. value must in 1..13" }
     require(suit in 1..4) { "Bad suit[$suit]. suit must in 1..4" }
-
-
 
 
 
