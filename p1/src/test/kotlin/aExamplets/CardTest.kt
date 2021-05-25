@@ -2,6 +2,7 @@ package aExamplets
 
 import org.junit.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFails
 import kotlin.test.fail
 
 class CardTest {
@@ -28,7 +29,7 @@ class CardTest {
         val c3 = Card(value = 1, suit = 3)
         val c4 = Card(value = 1, suit = 4)
 
-        val c5 = Card(value = 1, suit = 5)
+
 
         assertEquals("Spades", c1.computeSuitNameIfExpression())
         assertEquals("Hearts", c2.computeSuitNameIfExpression())
@@ -36,10 +37,11 @@ class CardTest {
         assertEquals("Diamonds", c4.computeSuitNameIfExpression())
 
         try {
-            assertEquals("ff", c5.computeSuitNameIfExpression())
+          Card(value = 1, suit = 5)
+//            assertEquals("ff", c5.computeSuitNameIfExpression())
             fail("We should never get here")
             //should never get hear
-        } catch (e: IllegalStateException) {
+        } catch (e: IllegalArgumentException) {
             println(e.message)
             //success
         }
@@ -65,7 +67,6 @@ class CardTest {
         println(c1.suitName2)  //broke
         println(c1.suitName1)
         println(c1.suitName2)
-//        println(c1.computeSuitName())
 
     }
 }

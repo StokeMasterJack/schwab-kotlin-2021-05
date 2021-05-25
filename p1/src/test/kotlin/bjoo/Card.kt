@@ -40,5 +40,6 @@ data class Card(val value: Int, var suit: Int) {
 
         }
 
+    val name: String get() = "$valueName of $suitName"
 
 }

@@ -1,6 +1,8 @@
 package aExamplets
 
 import kotlin.test.Test
+import kotlin.test.assertFails
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 /*
@@ -53,11 +55,10 @@ class AssertionsDemo {
 
     @Test
     fun test() {
-        println(computeArea1(100, l = 5))
+        assertFails {
+            println(computeArea1(100, l = 5))
+        }
     }
-
-
-
 
 
     @Test
@@ -65,12 +66,16 @@ class AssertionsDemo {
         val p1 = Point1(x = 1, y = 44)
 
         assertTrue(p1.x in 1..4)
-        assertTrue(p1.y in 1..4)
+        assertFalse(p1.y in 1..4)
     }
 
     @Test
     fun testPointSmart() {
-        val p1 = Point2(x = 1, y = 44)
+        val p1 = Point2(x = 1, y = 1)
+
+        assertFails {
+            Point2(x = 1, y = 55)
+        }
     }
 
 
