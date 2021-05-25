@@ -7,13 +7,22 @@ Game
     isGameOver:Boolean
 
 Hand
-    name:String     //Dealer or Player
+    name:String             //Dealer or Player - set in Hand constructor
+    isStay:Boolean          //player hit the stay (true) button or the deal button (false)
+
+    //derived from the other fields
+
     cards: List<Card>
-    points: Int         //sum of card points
-    status: String      //12 Points
-    isBust: Boolean     //points > 21
+    cardCount:Int
+    points: Int             //sum of card points
+    status: String          //12 Points
     isBlackjack: Boolean     //points = 21
-    isStay:Boolean           //player hit the stay button
+
+    val isBust:Boolean get() = points > 21
+
+    constructor initialized vals (set-once)
+
+    var isStay
 
 Card
     value: Int  //1..13
@@ -26,6 +35,16 @@ Card
 
 
 
-fun stay()    //adds cards, 1 at a time, to dealer, until > 17
+fun stay()
+    adds cards, 1 at a time, to dealer, until > 17
+    sets playerHand.isStay = true
 fun hit()    //adds 1 card to player
-fun deal()   //clears both hands  , adds 2 cards to both (player and dealer)
+fun deal()
+    clears both hands
+    playerHand.cardCount = 0
+    dealerHand.cardCount = 0
+    adds 2 cards to both hands cardCount = 2
+    playerHand.cardCount = 2
+    dealerHand.cardCount = 2
+    playerHand.isStay = false
+    dealerHand.isStay = false

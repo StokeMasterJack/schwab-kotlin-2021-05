@@ -23,5 +23,8 @@ class HandTest {
         assertEquals(false,h1.isBust)
         assertEquals(false,h1.isBlackjack)
         assertEquals(false,h1.isStay)
+
+
+
     }
 }
