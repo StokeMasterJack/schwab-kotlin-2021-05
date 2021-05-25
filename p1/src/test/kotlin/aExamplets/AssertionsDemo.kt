@@ -49,11 +49,10 @@ data class Point2(val x: Int, var y: Int) {
     }
 }
 
-class Assertions {
+class AssertionsDemo {
 
     @Test
     fun test() {
-//        println(computeArea1(5, l = 5))
         println(computeArea1(100, l = 5))
     }
 
