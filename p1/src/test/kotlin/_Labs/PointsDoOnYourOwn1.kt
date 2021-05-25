@@ -6,11 +6,17 @@ import kotlin.test.assertEquals
 
 fun computePoints(value: Int): Int {
     require(value in 1..13) { "Bad value[$value]. value must in 1..13" }
-    return 1
+
+    return when (value) {
+        in 1..9 -> value
+        in 10..13 -> 10
+        else -> throw IllegalStateException("Bad value: $value")
+    }
 }
 
 
 //don't change the test
+//Checkmark when you are done
 class PointsDoOnYourOwnSimple {
 
     @Test
