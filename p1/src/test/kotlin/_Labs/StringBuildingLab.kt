@@ -4,6 +4,9 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 
+//also, have a look at:
+//   _notes/string-templates-and-multi-line.txt
+
 fun computeCardName(valueName:String,suitName:String):String{
 
 
