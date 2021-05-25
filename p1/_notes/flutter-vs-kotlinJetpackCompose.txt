@@ -1,0 +1,54 @@
+
+
+flutter and compose and react
+
+dev productivity/cost (flutter) vs app awesomeness (swift)
+
+Flutter:
+    final b = new Button()
+    final b = new MaterialButton()
+    final b = new CupertinoButton()
+
+Flutter
+    dart (flutter)             90%
+    android (kotlin/java)      5%
+    iOS (swift/objectiveC)     5%
+
+
+Flutter
+    dart (flutter)             20%
+        neutral
+        android
+        iOS
+        GPS
+    android (kotlin/java)      40%
+    iOS (swift/objectiveC)     40%
+
+
+Java
+    JNI: JDBC-C
+
+Flutter:
+    giant, beautiful, widget library
+    # ui widgets: 1000s
+
+React
+    # ui widgets: 0
+
+
+React-Native:
+    delegates all ui widget stuff to iOS
+    React-Native draws a button by delegating to Apple's Button widget
+    Kotlin used to do the same
+
+Flutter
+    reinvents everything
+    Flutter hooks into the native OS (iOS/Android) at a super low level: low level graphics
+    Flutter draws a button by drawing lines and dots
+    Flutter are large to download: All of the widgets are compiled into the deliverable and shipped as part of the app
+    Because with classic Android/iOS: UI widgets are part of the OS (part of phone)
+    U do not need to call out to native apple code for UI
+    U DO to call out to native apple/android code for Location/GPS
+
+Flutter's Dart code is compiled into native machine code
+

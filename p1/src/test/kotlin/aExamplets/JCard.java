@@ -1,4 +1,4 @@
-package bj;
+package aExamplets;
 
 public class JCard {
 
@@ -6,8 +6,12 @@ public class JCard {
     private int suit;
 
     JCard(int value, int suit) {
+        if(suit > 4) throw new IllegalStateException("Bad suit: $suit");
+        if(value > 13) throw new IllegalStateException("Bad value: value");
         this.value = value;
         this.suit = suit;
+        System.err.println("value[" + value + "]");
+        System.err.println("suit[" + suit + "]");
     }
 
 

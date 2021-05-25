@@ -41,6 +41,7 @@ fun boozyState(alcoholLevel: Int): String = if (alcoholLevel > 1.0) "Drunk" else
 fun drinkingAge(state: String): Int = if (state == "WS") 14 else 21
 
 fun sum1(x: Int, y: Int): Int {
+    if(y < 1) throw IllegalArgumentException("Bad y")
     return x + y
 }
 
