@@ -57,6 +57,7 @@ class CardTest {
         val c13 = Card(value = 13, suit = 4)
 
 
+        assertEquals("Ace", c1.valueName)
         assertEquals("2", c2.valueName)
         assertEquals("10", c10.valueName)
         assertEquals("Jack", c11.valueName)
