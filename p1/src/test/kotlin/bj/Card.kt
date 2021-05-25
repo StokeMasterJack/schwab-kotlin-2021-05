@@ -7,14 +7,31 @@ package bj
 data class Card(val value: Int, var suit: Int) {
 
     init {
-        require(suit in 1..4) { "Bad suit[$suit]. suit must in 1..4"  }
-        require(value in 1..13) {  "Bad value[$value]. value must in 1..13"  }
+        require(suit in 1..4) { "Bad suit[$suit]. suit must in 1..4" }
+        require(value in 1..13) { "Bad value[$value]. value must in 1..13" }
     }
 
-//    init {
-//        if (suit !in 1..4) throw IllegalArgumentException("Bad suit[$suit]. suit must in 1..4")
-//        if (value !in 1..13) throw IllegalArgumentException("Bad value[$value]. value must in 1..13")
-//    }
+    fun computeValueName(): String {
+        return when (value) {
+            1 -> "Ace"
+            in 2..10 -> value.toString()
+            11 -> "Jack"
+            12 -> "Queen"
+            13 -> "King"
+            else -> throw IllegalStateException("Bad value: $value")
+        }
+    }
+
+    val valueName2: String get() {
+        return when (value) {
+            1 -> "Ace"
+            in 2..10 -> value.toString()
+            11 -> "Jack"
+            12 -> "Queen"
+            13 -> "King"
+            else -> throw IllegalStateException("Bad value: $value")
+        }
+    }
 
     val suitName: String
         get() = when (suit) {
@@ -24,6 +41,18 @@ data class Card(val value: Int, var suit: Int) {
             4 -> "Diamonds"
             else -> throw IllegalStateException("Bad suit: $suit")
         }
+
+    val valueName: String
+        get() = when (value) {
+            1 -> "Ace"
+            in 2..10 -> value.toString()
+            11 -> "Jack"
+            12 -> "Queen"
+            13 -> "King"
+            else -> throw IllegalStateException("Bad value: $value")
+        }
+
+
 
 
 }

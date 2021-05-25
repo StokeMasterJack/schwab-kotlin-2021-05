@@ -21,21 +21,7 @@ class CardTest {
     }
 
     @Test
-    fun testSuitName() {
-
-        val c1 = Card(value = 1, suit = 1)
-        val c2 = Card(value = 1, suit = 2)
-        val c3 = Card(value = 1, suit = 3)
-        val c4 = Card(value = 1, suit = 4)
-
-
-
-        assertEquals("Spades", c1.suitName)
-        assertEquals("Hearts", c2.suitName)
-        assertEquals("Clubs", c3.suitName)
-        assertEquals("Diamonds", c4.suitName)
-
-
+    fun testConstructorArgValidation() {
         assertFailsWith<IllegalArgumentException> {
             Card(value = 1, suit = 5)  //here
         }
@@ -44,6 +30,21 @@ class CardTest {
         assertFailsWith<IllegalArgumentException> {
             Card(value = 16, suit = 4)  //here
         }
+    }
+
+    @Test
+    fun testSuitName() {
+
+        val c1 = Card(value = 1, suit = 1)
+        val c2 = Card(value = 1, suit = 2)
+        val c3 = Card(value = 1, suit = 3)
+        val c4 = Card(value = 1, suit = 4)
+
+        assertEquals("Spades", c1.suitName)
+        assertEquals("Hearts", c2.suitName)
+        assertEquals("Clubs", c3.suitName)
+        assertEquals("Diamonds", c4.suitName)
+
 
     }
 
@@ -64,7 +65,28 @@ class CardTest {
         assertEquals("King", c13.valueName)
 
 
+        assertEquals("King", c13.computeValueName())
+
+
     }
+
+//    @Test
+//    fun testPoints() {
+//
+//        val c1 = Card(value = 1, suit = 1)
+//        val c2 = Card(value = 2, suit = 2)
+//        val c10 = Card(value = 10, suit = 3)
+//        val c11 = Card(value = 11, suit = 4)
+//        val c13 = Card(value = 13, suit = 4)
+//
+//        assertEquals(1, c1.points)
+//        assertEquals(2, c2.points)
+//        assertEquals(10, c10.points)
+//        assertEquals(10, c11.points)
+//        assertEquals(10, c13.points)
+//
+//
+//    }
 
 
 }
