@@ -16,18 +16,7 @@ class Hand(val name: String) {
 
     val isBust:Boolean get() = points > 21
 
-
-
     val isBlackjack:Boolean get() = points == 21
-
-
-
-//    fun isBlackjack():Boolean{  //true
-//        return points == 21
-//    }
-
-    val isBlackjack2:Boolean = points == 21
-    var isBlackjack3:Boolean = points == 21
 
     val status:String get() = "$points Points"
 
