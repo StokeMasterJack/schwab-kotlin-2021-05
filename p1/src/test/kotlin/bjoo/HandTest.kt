@@ -16,6 +16,7 @@ class HandTest {
     fun test() {
         val h1 = Hand(name = "Player")                  //name must be either Player of Dealer
 
+
         assertEquals(0,h1.cardCount)
         assertEquals("0 Points",h1.status)
         assertEquals(0,h1.points)

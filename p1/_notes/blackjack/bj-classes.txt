@@ -9,20 +9,17 @@ Game
 Hand
     name:String             //Dealer or Player - set in Hand constructor
     isStay:Boolean          //player hit the stay (true) button or the deal button (false)
+    cards: List<Card>       //cards in the hand
 
     //derived from the other fields
 
-    cards: List<Card>
+
     cardCount:Int
     points: Int             //sum of card points
     status: String          //12 Points
-    isBlackjack: Boolean     //points = 21
+    isBlackjack: Boolean    //points = 21
+    isBust:Boolean          //points > 21
 
-    val isBust:Boolean get() = points > 21
-
-    constructor initialized vals (set-once)
-
-    var isStay
 
 Card
     value: Int  //1..13
