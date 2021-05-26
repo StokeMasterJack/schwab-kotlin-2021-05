@@ -1,11 +1,32 @@
 package _Labs
 
+import java.sql.Connection
+import javax.sql.DataSource
 import kotlin.test.Test
+
+
+fun f1() {
+    //open db connection
+    //start tx
+
+    //custom
+
+
+    //commit tx
+    //close db connection
+}
 
 fun slowCode() {
     println("slowCode - start")
     Thread.sleep(1000)
     println("slowCode - complete")
+}
+
+fun profile(l: () -> Unit) {
+    val t1 = System.currentTimeMillis()
+    l()
+    val t2 = System.currentTimeMillis()
+    println("Delta: " + (t2 - t1))
 }
 
 class LambdaProfile {
@@ -25,10 +46,10 @@ class LambdaProfile {
      */
     @Test
     fun profileWithLambdas() {
-        profile{
+        profile {
             slowCode()
         }
-
     }
 
 }
+

@@ -44,8 +44,6 @@ fun listTotal3() {
     val c1 = Card1(13, 4)
 
     val cards: List<Card1> = listOf(c0, c1)
-
-
     val pointTotal: Int = cards.sumOf { it.points }
 
     println(cards)

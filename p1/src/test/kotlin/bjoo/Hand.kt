@@ -8,6 +8,10 @@ class Hand(val name: String) {
 
     val cardCount2:Int  = 0
 
+
+    /**
+     * The points for a Hand is simply the sum of the points for the cards
+     */
     val points:Int get() = 21
 
     val isBust:Boolean get() = points > 21
