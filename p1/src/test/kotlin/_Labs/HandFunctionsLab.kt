@@ -29,10 +29,27 @@ class HandFunctionsLab {
         assertEquals(expected = 2, actual = cc)
     }
 
+    @Test
+    fun testComputeIsBust() {
+        val b = computeIsBust(cards)
+        assertEquals(expected = false, actual = b)
+    }
+
+    @Test
+    fun testComputeIs21() {
+        val b = computeIsBlackjack(cards)
+        assertEquals(expected = false, actual = b)
+    }
+
+    @Test
+    fun testComputeStatus() {
+        val s = computeStatus(cards)
+        assertEquals(expected = "11 Points", actual = s)
+    }
 }
 
 
-fun computeHandPoints(cards: List<Card>) = cards.sumOf { it.points }
+private fun computeHandPoints(cards: List<Card>): Int = cards.sumOf { it.points }
 
-//
+private fun computeCardCount(cards: List<Card>): Int = cards.size
 
