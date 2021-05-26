@@ -12,7 +12,6 @@ fun fSquare(x:Int) = x * x
 
 val lSquare:(Int) -> Int = { it * it }
 
-
 //don't change the test
 //Task: create a lambda function called lSquare
 //lSquare is functionally equivalent to fSquare
