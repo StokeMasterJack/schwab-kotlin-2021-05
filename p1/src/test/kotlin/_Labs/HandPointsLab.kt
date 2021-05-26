@@ -13,20 +13,16 @@ Hint: use sumOf
  */
 class HandPointsLab {
 
-
     @Test
     fun testComputeHandPoints() {
         val c0 = Card(1, 1)  //1 point
         val c1 = Card(13, 4) //10 points
         val cards: List<Card> = listOf(c0, c1)
-
         val hp = computeHandPoints(cards)
-
         assertEquals(expected = 11,actual = hp)
-
-
-
-
     }
 
 }
+
+
+//Your code goes here
