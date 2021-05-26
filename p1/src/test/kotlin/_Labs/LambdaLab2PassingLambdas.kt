@@ -22,9 +22,19 @@ fun do3Times(l: () -> Unit) {
     l()
 }
 
-fun myFun(){
-    println(333)
+/**
+ * @param n  how many times to run the function (aka lambda)
+ * @param l the function you want to run n times
+ */
+fun doNTimes(n: Int, l: (index:Int) -> Unit) {
+    var i = 1
+    while (i <= n) {
+        l(i)
+        i++
+    }
 }
+
+
 class LambdaLab2PassingLambdas {
 
 
@@ -78,16 +88,18 @@ class LambdaLab2PassingLambdas {
     fun testDoNTimes() {
 
         doNTimes(5) {
-            println("Hello")
+            println("Hello  $it")
         }
+
+
 
         /*
         Expected output:
-            Hello
-            Hello
-            Hello
-            Hello
-            Hello
+            Hello 0
+            Hello 1
+            Hello 2
+            Hello 3
+            Hello 4
          */
 
 

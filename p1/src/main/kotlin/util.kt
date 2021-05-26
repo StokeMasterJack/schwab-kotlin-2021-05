@@ -1,0 +1,1 @@
+typealias VF = () -> Unit
