@@ -16,6 +16,11 @@ Task:
 
 
 //your code goes here
+fun do3Times(a: () -> Unit) {
+    a()
+    a()
+    a()
+}
 
 
 class LambdaLab2PassingLambdas {
@@ -48,11 +53,15 @@ class LambdaLab2PassingLambdas {
     }
 
 
-    fun testDo3Times(){
+    @Test
+    fun testDo3Times() {
+
 
         do3Times {
             println("Hello")
         }
+
+
 
         /*
         Expected output:
