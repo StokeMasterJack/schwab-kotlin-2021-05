@@ -10,7 +10,7 @@ val lDouble: (Int) -> Int = { it + it }
 
 fun fSquare(x:Int) = x * x
 
-//val lSquare
+val lSquare:(Int) -> Int = { it * it }
 
 
 //don't change the test
