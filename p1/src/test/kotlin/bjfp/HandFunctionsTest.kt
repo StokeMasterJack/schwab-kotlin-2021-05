@@ -1,17 +1,10 @@
-package _Labs
+package bjfp
 
 import bjoo.Card
-import kotlin.test.Test
+import org.junit.Test
 import kotlin.test.assertEquals
 
-
-/*
-Task: create the function computeCardCount such that testComputeCardCount compiles, runs and passes
-
-Hint: use List's size function
-
- */
-class HandFunctionsLab {
+class HandFunctionsTest {
 
     private val c0 = Card(1, 1)              //1 point
     private val c1 = Card(13, 4)             //10 points
@@ -55,29 +48,5 @@ class HandFunctionsLab {
         assertEquals(expected = "11 Points", actual = computeHandStatus(cards))
         assertEquals(expected = "Blackjack!", actual = computeHandStatus(cards21))
         assertEquals(expected = "Bust!", actual = computeHandStatus(cards24))
-    }
-}
-
-
-private fun computeHandPoints(cards: List<Card>): Int = cards.sumOf { it.points }
-
-private fun computeHandCardCount(cards: List<Card>): Int = cards.size
-
-private fun computeHandIsBust(cards: List<Card>): Boolean {
-    val p = computeHandPoints(cards)
-    return p > 21
-}
-
-private fun computeHandIsBlackjack(cards: List<Card>): Boolean {
-    val p = computeHandPoints(cards)
-    return p == 21
-}
-
-private fun computeHandStatus(cards: List<Card>): String {
-    val p = computeHandPoints(cards)
-    return when(p){
-        in 0..20 -> "$p Points"
-        21 -> "Blackjack!"
-        else -> "Bust!"
     }
 }

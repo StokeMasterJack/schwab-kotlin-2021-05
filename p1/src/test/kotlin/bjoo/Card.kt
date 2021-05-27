@@ -43,4 +43,5 @@ data class Card(val value: Int, val suit: Int) {
     val name: String get() = "$valueName of $suitName"
 
     override fun toString() = name
+
 }
