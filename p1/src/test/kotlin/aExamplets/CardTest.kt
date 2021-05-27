@@ -19,6 +19,16 @@ class CardTest {
         assertEquals(4, c2.suit)
         assertEquals(1, c2.value)
 
+
+        val c3 = c2.copy()
+        assertEquals(4, c3.suit)
+        assertEquals(1, c3.value)
+
+
+        val c4 = c3.copy(value = 13,suit = 1)
+        assertEquals(4, c3.suit)
+        assertEquals(1, c3.value)
+
     }
 
     @Test
