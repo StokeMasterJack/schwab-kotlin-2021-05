@@ -1,10 +1,10 @@
 package bjoo
 
-class Hand(val name: String) {
+class Hand(val name: String = "Player") {
 
     var isStay: Boolean = false
 
-    val cardCount: Int get() = 0
+    val size: Int get() = 0
 
     /**
      * The points for a Hand is simply the sum of the points for the cards

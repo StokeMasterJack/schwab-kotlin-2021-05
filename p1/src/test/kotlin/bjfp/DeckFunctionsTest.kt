@@ -30,21 +30,5 @@ class DeckFunctionsTest {
     }
 
 
-    /*
-    12:50
-    task: create Deck class such that test_generateNewDeck compiles, runs and passes
 
-
-     */
-    @Test
-    fun test_generateNewDeck() {
-        val d:Deck = Deck(shuffle = false)
-        assertEquals(expected = 52, actual = d.cardCount)
-
-        assertEquals(Card(1, 1), d.first())
-        assertEquals(Card(13, 4), d.last())
-
-        val set: Set<Card> = d.cards.toSet()
-        assertEquals(52, set.size)
-    }
 }
