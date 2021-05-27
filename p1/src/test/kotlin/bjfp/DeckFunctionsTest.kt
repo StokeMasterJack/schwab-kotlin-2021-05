@@ -29,6 +29,13 @@ class DeckFunctionsTest {
         renderDeck(cards)
     }
 
+
+    /*
+    12:50
+    task: create Deck class such that test_generateNewDeck compiles, runs and passes
+
+
+     */
     @Test
     fun test_generateNewDeck() {
         val d:Deck = Deck(shuffle = false)
