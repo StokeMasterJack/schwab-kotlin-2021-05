@@ -1,4 +1,4 @@
-package bjoo
+package cs.blackjack
 
 data class Deck(val shuffle: Boolean = true, val cards: List<Card> = generateInitialCards(shuffle)) {
 

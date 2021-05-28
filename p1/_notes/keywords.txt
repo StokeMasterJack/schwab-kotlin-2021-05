@@ -5,22 +5,35 @@ const
 
 if
 when
+map
+
 fun
 class
 
 
 Unit
+
 in
 !in
 
 is
 !is
 
+when(myShape){
+  is Circle-> myShape.radius
+  is Square->
+}
 
 extension functions
 
+val Foo.cardCount:Int get() = 33
+
 
 it
+
+apply/run/moving-this
+
+"""
 
 
 

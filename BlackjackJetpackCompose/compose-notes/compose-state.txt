@@ -1,0 +1,27 @@
+Rule: you never update UI directly
+        you update state - compose updates the UI
+
+fun onHit(){
+    val btnDeal =
+    btnDeal.enabled = true
+}
+
+state is maintained at the level of the tree: high enough bu not higher
+
+setContent
+    BlackjackTheme
+        Surface
+            Profile
+            List
+            Screen3
+            GameController
+                g:Game
+                GameVu
+                    Column
+                        BjButtonBar
+                            Row
+                                Button
+                                Button
+                                Button
+                        HandVu
+                        HandVu

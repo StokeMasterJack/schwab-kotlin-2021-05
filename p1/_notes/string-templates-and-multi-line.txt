@@ -10,4 +10,4 @@ val ln = "Ford"
 val rawString1 = """
     SELECT * FROM USERS
     WHERE lastName = $ln
-"""
+""".trimIndent()

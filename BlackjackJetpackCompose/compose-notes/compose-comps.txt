@@ -1,0 +1,32 @@
+
+
+Compose: UI Toolkit
+    Lang: 10%
+    UI toolkit: 90%
+
+
+UI Components: functions
+
+
+UI Component Tree
+
+Themes
+UserProfile
+
+Unidirectional Data Flow
+    Data goes gown the tree
+    Event go up the tree
+
+App
+    Page1(3)
+    Page2(7)
+        Panel1(7)
+        Panel1(7)
+            GameController
+                g
+                GameVu(7)
+                    HandVu(7)
+                    HandVu(7)
+                        CardVu(7)
+                    BjButtonBar
+

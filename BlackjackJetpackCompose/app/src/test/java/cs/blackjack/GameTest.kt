@@ -1,7 +1,5 @@
-package bjoo
+package cs.blackjack
 
-import java.awt.Dimension
-import javax.swing.JFrame
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -74,7 +72,7 @@ class GameTest {
 
     @Test
     fun test1() {
-        val thingWithAgiantFooBarAttheEnd = JFrame()
+//        val thingWithAgiantFooBarAttheEnd = JFrame()
 //        thingWithAgiantFooBarAttheEnd.size
 //        thingWithAgiantFooBarAttheEnd.size
 //        thingWithAgiantFooBarAttheEnd.size
@@ -91,7 +89,6 @@ class GameTest {
 
     @Test
     fun test() {
-            var g = Game().hit()
 
 
         Game().apply {
@@ -148,8 +145,19 @@ class GameTest {
             assertEquals(expected = 2, actual = dh.size)
             assertEquals(expected = 7, actual = dh.points)      //3 4
 
-//            assertTrue(isGameOver)
-        }.hit()
+            assertTrue(isGameOver)
+        }.deal().apply {
+            assertEquals(expected = 41, actual = deck.size)
+
+            assertEquals(expected = 2, actual = ph.size)
+            assertEquals(expected = 17, actual = ph.points)     //8 9
+            assertFalse(ph.isBlackjack)
+
+            assertEquals(expected = 2, actual = dh.size)        //10 11
+            assertEquals(expected = 20, actual = dh.points)
+
+            assertFalse(isGameOver)
+        }
 
     }
 
